@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import Output from './Output';
+import marked from 'marked';
 import logo from './logo.svg';
 import './App.css';
 
@@ -13,6 +15,7 @@ class App extends Component {
         </div>
         <div className="main-container">
           <Input />
+          <Output />
         </div>
       </div>
     );

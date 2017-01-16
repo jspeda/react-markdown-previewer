@@ -22,3 +22,24 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container > * {
+  flex: 1;
+  /*border: 1px solid red;*/
+}
+
+.input-box {
+  /*border: 1px solid red;*/
+}
+
+.output-box {
+  border: 1px solid red;
+  height: 750px;
+  widght: 500px;
+}
