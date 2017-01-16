@@ -11,7 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>React Markdown Previewer</h2>
         </div>
-        <div className="input-area">
+        <div className="main-container">
           <Input />
         </div>
       </div>
