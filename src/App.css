@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #222;
-  height: 90px;
+  height: 80px;
   padding: 20px;
   color: white;
 }
@@ -23,23 +23,41 @@
   to { transform: rotate(360deg); }
 }
 
-.main-container {
+.outer-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+}
+
 .main-container > * {
   flex: 1;
-  /*border: 1px solid red;*/
+  margin: 5%;
 }
 
 .input-box {
-  /*border: 1px solid red;*/
 }
 
 .output-box {
   border: 1px solid red;
-  height: 750px;
-  widght: 500px;
+  height: 760px;
+  width: 800px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+}
+
+.github {
+  padding-top: 30%;
 }

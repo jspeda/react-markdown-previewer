@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import marked from 'react-marked';
+import remark from 'remark';
+import reactRenderer from 'remark-react';
 
 class Output extends Component {
+
   render() {
     return (
       <div className="output-box">
-        {marked(this.props.outputText.input)}
+        {remark().use(reactRenderer).process(this.props.outputText.input).contents}
       </div>
-    )
+    );
   }
-}
+};
 
 export default Output;

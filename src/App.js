@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import Output from './Output';
-import marked from 'marked';
+import Footer from './Footer';
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,14 +9,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      input: 'here **is** some sample text'
+      input: '\n # This is a markdown previewer \n ****  \n ## Here we have some *sample text* \n _try it yourself!_'
     }
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
    this.setState({input: event.target.value});
-   console.log(this.state.input);
   }
 
   render() {
@@ -26,13 +25,16 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>React Markdown Previewer</h2>
         </div>
-        <div className="main-container">
-          <Input inputText={this.state} handleChange={this.handleChange} />
-          <Output outputText={this.state} />
+        <div className="outer-container">
+          <div className="main-container">
+            <Input inputText={this.state} handleChange={this.handleChange} />
+            <Output outputText={this.state} />
+          </div>
+          <Footer />
         </div>
       </div>
     );
   }
-}
+};
 
 export default App;
