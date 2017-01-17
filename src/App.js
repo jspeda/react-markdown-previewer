@@ -6,6 +6,20 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      input: 'here is some sample text'
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+   this.setState({input: event.target.value});
+   console.log(this.state.input);
+  }
+
   render() {
     return (
       <div className="App">
@@ -14,8 +28,8 @@ class App extends Component {
           <h2>React Markdown Previewer</h2>
         </div>
         <div className="main-container">
-          <Input />
-          <Output />
+          <Input inputText={this.state} handleChange={this.handleChange} />
+          <Output outputText={this.state} />
         </div>
       </div>
     );

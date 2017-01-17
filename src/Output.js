@@ -4,11 +4,10 @@ import Input from './Input';
 
 class Output extends Component {
 
-  //let markdown = marked('# this is a __test__')
-
   render() {
     return (
-      <div className="output-box" value={marked('# hi')}>
+      <div className="output-box">
+        {marked(this.props.outputText.input)}
       </div>
     )
   }
