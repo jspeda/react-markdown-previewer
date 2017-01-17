@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import marked from 'marked';
-import Input from './Input';
+import marked from 'react-marked';
 
 class Output extends Component {
-
   render() {
     return (
       <div className="output-box">

@@ -6,11 +6,10 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
-      input: 'here is some sample text'
+      input: 'here **is** some sample text'
     }
     this.handleChange = this.handleChange.bind(this);
   }
